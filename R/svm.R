@@ -44,6 +44,7 @@ function (formula, data = NULL, ..., subset, na.action = na.omit, scale = TRUE)
 svm.default <-
 function (x,
           y           = NULL,
+          W           = NULL,
           scale       = TRUE,
           type        = NULL,
           kernel      = "radial",
@@ -251,6 +252,7 @@ function (x,
                 as.double  (if (sparse) x@ra else t(x)),
                 as.integer (nr), as.integer(ncol(x)),
                 as.double  (y),
+                as.double  (W),
                 ## sparse index info
                 as.integer (if (sparse) x@ia else 0),
                 as.integer (if (sparse) x@ja else 0),

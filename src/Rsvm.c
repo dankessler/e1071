@@ -195,6 +195,7 @@ void do_cross_validation(struct svm_problem *prob,
 
 void svmtrain (double *x, int *r, int *c, 
 	       double *y,
+           double *W,
 	       int    *rowindex, int *colindex,
 	       int    *svm_type,
 	       int    *kernel_type,
@@ -260,6 +261,7 @@ void svmtrain (double *x, int *r, int *c,
     /* set problem */
     prob.l = *r;
     prob.y = y;
+    prob.W = W;
     
     if (*sparse > 0)
 	prob.x = transsparse(x, *r, rowindex, colindex);

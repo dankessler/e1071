@@ -26,6 +26,7 @@ ufcl(double *x, int *nr_x, int *nc, double *p, int *nr_p, double *w,
 void
 svmtrain (double *x, int *r, int *c, 
           double *y,
+          double *W,
           int    *rowindex, int *colindex,
           int    *svm_type,
           int    *kernel_type,
@@ -123,7 +124,7 @@ static const R_CMethodDef CEntries[] = {
     {"cshell", (DL_FUNC) &cshell, 15},
     {"e1071_floyd", (DL_FUNC) &e1071_floyd, 4},
     {"svmpredict", (DL_FUNC) &svmpredict, 30},
-    {"svmtrain", (DL_FUNC) &svmtrain, 37},
+    {"svmtrain", (DL_FUNC) &svmtrain, 38},
     {"svmwrite", (DL_FUNC) &svmwrite, 21},
     {"ufcl", (DL_FUNC) &ufcl, 15},
     {NULL, NULL, 0}
