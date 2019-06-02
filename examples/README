@@ -1,0 +1,11 @@
+# Weighted Instance SVM (winsvm)
+
+# example_data.R
+
+- This script produces a .csv file with data for testing the instance weighted SVM in R and Python
+
+- The .csv data includes 12 features for the SVM, a column of inverse probability weights derived from logisitic regression, and a column of binary class labels.
+
+# fit_R_winsvm.R
+
+- This script fits an instance weighted SVM and an unweighted SVM in R for comparison with Python (scikit learn) output.
